@@ -6,7 +6,7 @@ namespace Monty_Hall
     {
         static void Main(string[] args)
         {
-            OneGame();
+            //OneGame();
             AiGame();
         }
 
