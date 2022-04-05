@@ -6,14 +6,15 @@ namespace Monty_Hall
     {
         static void Main(string[] args)
         {
-            HumanGame();
+            OneGame();
             AiGame();
         }
 
-        static void HumanGame()
+        static void OneGame()
         {
             Random random = new Random(Guid.NewGuid().GetHashCode());
             IInterface userInterface = new CommandLineInterface();
+            //the usage of UI is flexible here. As long as the UI implements the IInterface interface, it should work, even if you use the AI interface here.
             Game game = new Game(random);
 
             userInterface.DisplayPrompt("WELCOME to player who is playing to win a BRAND NEW CAR!");

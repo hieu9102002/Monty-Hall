@@ -34,7 +34,18 @@ namespace Monty_Hall
         public void DisplayDoors(Door[] doors)
         {
             //can extend to write the choices to a text file
-            throw new NotImplementedException();
+            Console.WriteLine("Here are our doors: ");
+            string output = "";
+            foreach (Door door in doors)
+            {
+                if (door.Opened)
+                {
+                    output += door.Prize ? "CAR" : "GOAT";
+                }
+                else output += door.DoorNo;
+                output += "\t";
+            }
+            Console.WriteLine(output);
         }
 
         public void DisplayPrompt(string prompt)
